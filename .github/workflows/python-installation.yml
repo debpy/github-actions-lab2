@@ -9,9 +9,13 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
+          - macos-latest
         py-version:
           - 3.7
           - 3.8
+        exclude:
+          - os: macos-latest
+          - py-version: macos-latest
     steps:
       - name: Set up Python
         uses: actions/setup-python@v4
